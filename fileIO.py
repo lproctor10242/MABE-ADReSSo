@@ -2,8 +2,10 @@ import csv
 
 def readCSV(fileIn):
 	with open(fileIn, newline='') as csvfile:
+		#putting all values of the csv file into a list object
 		segments = csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC)
 		seglist = []
+		#making a list of lists containing each row
 		for row in segments:
 			seglist.append(row)
 
